@@ -67,11 +67,13 @@ h1 {
 }
 
 #new:hover {
-    padding: 12px;
+/*    padding: 12px;
     padding-left: 52px;
     padding-right: 52px;
     margin-top: 48px;
-    font-size: 22px;
+    font-size: 22px; */
+    transform: translateY(-2px);
+    color: white;
 }
 
 #win {
