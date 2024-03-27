@@ -43,6 +43,7 @@ const enableBoxes = () => {
     for(let box of boxes) {
         box.disabled = false;
         box.innerText = "";
+        box.style.backgroundColor = "white";
     }
 }
 
@@ -65,6 +66,9 @@ const checkWinner = () => {
         if(pos1 != "" && pos2 != "" && pos3 != "") {
             if(pos1 === pos2 && pos2 === pos3) {
                 showWinner(pos1);
+                boxes[pattern[0]].style.backgroundColor = "skyblue";
+                boxes[pattern[1]].style.backgroundColor = "skyblue";
+                boxes[pattern[2]].style.backgroundColor = "skyblue";
                 winMsgCont.classList.remove("hide");
             }
         }
