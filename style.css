@@ -25,6 +25,10 @@ h1 {
     margin-bottom: 5vh;
 }
 
+.container #reset {
+    margin-top: 10px;
+}
+
 .game {
     height: 60vmin;
     width: 60vmin;
@@ -67,11 +71,6 @@ h1 {
 }
 
 #new:hover {
-/*    padding: 12px;
-    padding-left: 52px;
-    padding-right: 52px;
-    margin-top: 48px;
-    font-size: 22px; */
     transform: translateY(-2px);
     color: white;
 }
