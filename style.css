@@ -7,26 +7,23 @@ body {
     background-color: #000;
     text-align: center;
     color: #fff;
-    padding-top: 5vh;
 }
 
 h1 {
     font-family: 'Lucida Sans';
     font-style: oblique;
     font-size: 40px;
+    margin-bottom: 50px;
 }
 
 .container {
     height: 70vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-}
-
-.container #reset {
-    margin-top: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .game {
@@ -36,12 +33,13 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .box {
     height: 18vmin;
     width: 18vmin;
-    background-color: whitesmoke;
+    background-color: white;
     border-radius: 1rem;
     border: none;
     box-shadow: 0 0 10px whitesmoke;
@@ -62,22 +60,21 @@ h1 {
     border-radius: 50px;
     background-color: cyan;
     box-shadow: 0 0 25px springgreen;
-    margin-top: 500px;
     font-size: 20px;
     font-family: 'Lucida Sans';
     font-style: oblique;
     font-weight: 1000;
-    position: absolute;
 }
 
 #new:hover, #reset:hover {
-    transform: translateY(-3px);
     color: white;
+    transform: translateY(-3px);
 }
 
 #win {
     font-size: 6vmin;
-    margin-bottom: 5vh;
+    margin-top: 15vh;
+    margin-bottom: 35vh;
 }
 
 .msg {
@@ -86,6 +83,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 50vh;
 }
 
 .hide {
