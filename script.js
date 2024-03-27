@@ -1,5 +1,6 @@
 let boxes = document.querySelectorAll(".box");
 let newGame = document.querySelector("#new");
+let resetGame = document.querySelector("#reset");
 let turnX = true;
 let winMsgCont = document.querySelector(".msg");
 let winner = document.querySelector("#win");
@@ -25,6 +26,13 @@ boxes.forEach((box) => {
 });
 
 newGame.onclick = () => {
+    console.log("Button clicked");
+    turnX = true;
+    winMsgCont.classList.add("hide");
+    enableBoxes();
+}
+
+resetGame.onclick = () => {
     console.log("Button clicked");
     turnX = true;
     winMsgCont.classList.add("hide");
