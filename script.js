@@ -58,13 +58,24 @@ const showWinner = (top) => {
     disableBoxes();
 }
 
+const allBoxesDisabled = () => {
+    for(let box of boxes) {
+        if(box.disabled === false) {
+            return false;
+        }
+    }
+    return true;
+}
+
 const checkWinner = () => {
+    let win = false;
     for(pattern of winPatterns) {
         let pos1 = boxes[pattern[0]].innerText;
         let pos2 = boxes[pattern[1]].innerText;
         let pos3 = boxes[pattern[2]].innerText;
         if(pos1 != "" && pos2 != "" && pos3 != "") {
             if(pos1 === pos2 && pos2 === pos3) {
+                win = true;
                 showWinner(pos1);
                 boxes[pattern[0]].style.backgroundColor = "skyblue";
                 boxes[pattern[1]].style.backgroundColor = "skyblue";
@@ -72,5 +83,9 @@ const checkWinner = () => {
                 winMsgCont.classList.remove("hide");
             }
         }
+    }
+    if(!win && allBoxesDisabled()) {
+        winMsgCont.classList.remove("hide");
+        winner.innerText = "Match Drawn !";
     }
 };
